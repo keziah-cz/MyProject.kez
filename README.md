@@ -256,14 +256,6 @@ Total Visitors: 1
 
 ---
 
-# 📌 Notes
-
-> **Library Book Borrowing System**
->
-> Based on the provided source code, `views.py` currently only contains the list of books. The functions called in `main.py` (such as `show_all_books()`, `borrow_book()`, and `return_book()`) should be implemented inside `views.py` for the program to work correctly.
-
----
-
 <div align="center">
 
 ### 🌟 Thank you for checking out these Python Projects!
