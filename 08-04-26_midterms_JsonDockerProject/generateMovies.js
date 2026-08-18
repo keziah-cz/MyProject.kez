@@ -1,0 +1,96 @@
+const fs = require("fs");
+const path = require("path");
+
+const movies = [
+    {
+        id: 2,
+        title: "Interstellar",
+        year: 2014,
+        genre: "Sci-Fi",
+        rating: 8.7,
+        image: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+    },
+    {
+        id: 3,
+        title: "The Dark Knight",
+        year: 2008,
+        genre: "Action",
+        rating: 9.0,
+        image: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+    },
+    {
+        id: 4,
+        title: "Avengers: Endgame",
+        year: 2019,
+        genre: "Action",
+        rating: 8.4,
+        image: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg"
+    },
+    {
+        id: 5,
+        title: "The Matrix",
+        year: 1999,
+        genre: "Sci-Fi",
+        rating: 8.7,
+        image: "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg"
+    },
+    {
+        id: 6,
+        title: "Gladiator",
+        year: 2000,
+        genre: "Action",
+        rating: 8.5,
+        image: "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg"
+    },
+    {
+        id: 7,
+        title: "Titanic",
+        year: 1997,
+        genre: "Drama",
+        rating: 7.9,
+        image: "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"
+    },
+    {
+        id: 8,
+        title: "Avatar",
+        year: 2009,
+        genre: "Adventure",
+        rating: 7.9,
+        image: "https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg"
+    },
+    {
+        id: 9,
+        title: "Joker",
+        year: 2019,
+        genre: "Drama",
+        rating: 8.1,
+        image: "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg"
+    },
+    {
+        id: 10,
+        title: "Parasite",
+        year: 2019,
+        genre: "Thriller",
+        rating: 8.5,
+        image: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg"
+    }
+];
+
+const dataFolder = path.join(__dirname, "data");
+
+if (!fs.existsSync(dataFolder)) {
+    fs.mkdirSync(dataFolder);
+}
+
+const filePath = path.join(
+    dataFolder,
+    "movies.json"
+);
+
+fs.writeFileSync(
+    filePath,
+    JSON.stringify(movies, null, 2)
+);
+
+console.log("✅ Movies generated!");
+console.log(`📁 Saved to: ${filePath}`);

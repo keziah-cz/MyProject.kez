@@ -1,0 +1,12 @@
+services:
+  moviehub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: moviehub-container
+
+    ports:
+      - "3000:3000"
+
+    restart: unless-stopped

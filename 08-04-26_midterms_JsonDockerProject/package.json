@@ -1,0 +1,15 @@
+{
+  "name": "movie-site",
+  "version": "1.0.0",
+  "description": "Neumorphic movie website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "generate": "node generateMovies.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.1.0"
+  }
+}
+

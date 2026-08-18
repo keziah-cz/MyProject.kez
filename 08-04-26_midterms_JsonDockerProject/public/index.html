@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MovieTracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            Movie<span>Tracker</span>
+        </div>
+
+
+        <nav>
+
+            <a href="#">
+                Home
+            </a>
+
+            <a href="#movies">
+                Movies
+            </a>
+
+            <a href="#watchlist">
+                Watchlist
+
+                <span id="watchlistCount">
+                    0
+                </span>
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">
+                    WELCOME TO MOVIETRACKER
+                </p>
+
+
+                <h1>
+                    Discover Your
+                    <span>Next Movie</span>
+                </h1>
+
+
+                <p>
+                    Explore movies, discover new favorites,
+                    and build your personal watchlist.
+                </p>
+
+
+                <a
+                    href="#movies"
+                    class="hero-button"
+                >
+                    Explore Movies
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MOVIES
+        ========================== -->
+
+        <section
+            id="movies"
+            class="movies-section"
+        >
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <p class="section-label">
+                        EXPLORE
+                    </p>
+
+                    <h2>
+                        Movies
+                    </h2>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search movies..."
+                    autocomplete="off"
+                >
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 CAROUSEL
+            ========================== -->
+
+            <div class="movie-carousel-wrapper">
+
+
+                <!-- PREVIOUS -->
+
+                <button
+                    class="carousel-button left"
+                    id="prevButton"
+                    aria-label="Previous movies"
+                >
+                    ←
+                </button>
+
+
+
+                <!-- MOVIES WILL BE INSERTED HERE -->
+
+                <div
+                    class="movie-carousel"
+                    id="movieContainer"
+                >
+
+                    <p>
+                        Loading movies...
+                    </p>
+
+                </div>
+
+
+
+                <!-- NEXT -->
+
+                <button
+                    class="carousel-button right"
+                    id="nextButton"
+                    aria-label="Next movies"
+                >
+                    →
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             WATCHLIST
+        ========================== -->
+
+        <section
+            id="watchlist"
+            class="watchlist-section"
+        >
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="section-label">
+                        YOUR COLLECTION
+                    </p>
+
+                    <h2>
+                        My Watchlist
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WATCHLIST MOVIES -->
+
+            <div id="watchlistContainer">
+
+                <p>
+                    Your watchlist is empty.
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 MovieTracker
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
